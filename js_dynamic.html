@@ -4,7 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        window.onload = () => {
+            const addButton = document.getElementById('addButton');
+            const removeButton = document.getElementById('removeButton');
+            const fruitInput = document.getElementById('fruitInput');
+            const fruitList = document.getElementById('fruitList');
+
+            addButton.addEventListener('click', function(){
+                const inputText = fruitInput.value;
+                if (inputText.trim() === '') {
+                    alert('input fruit name!');
+                    return; 
+                }
+
+                const fruitArray = inputText.split(','); 
+                fruitList.innerHTML = '';
+
+                fruitArray.forEach(fruit => {
+                    const li = document.createElement('li');
+                    li.textContent = fruit.trim();
+                    fruitList.appendChild(li);
+                });
+            });
+            removeButton.addEventListener('click', () => {
+                fruitList.innerHTML = '';
+            });
+        }
+    </script>
 </head>
+<body>
     <h1>Dynamic Web page</h1>
     <input type="text" id="fruitInput">
     <button id="addButton">추가</button>
@@ -12,30 +42,3 @@
     <ul id="fruitList"></ul>
 </body>
 </html>
-    <script>
-        const addButton = document.getElementById('addButton');
-        const removeButton = document.getElementById('removeButton');
-        const fruitInput = document.getElementById('fruitInput');
-        const fruitList = document.getElementById('fruitList');
-
-        addButton.addEventListener('click', function(){
-            const inputText = fruitInput.value;
-            if (inputText.trim() === '') {
-                alert('input fruit name!');
-                return; 
-            }
-
-            const fruitArray = inputText.split(',').map(fruit => fruit.trim());
-            fruitList.innerHTML = '';
-
-            fruitArray.forEach(fruit => {
-                const li = document.createElement('li');
-                li.textContent = fruit;
-                fruitList.appendChild(li);
-            });
-        });
-        removeButton.addEventListener('click', () => {
-            fruitList.innerHTML = '';
-        });
-
-    </script>
