@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 상세</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/my.css">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="row justify-content-center"> 
+
+      <div class="col-md-7">
+        <img src="../img/학부공지 전산전자.jpg" alt="학부공지 배너" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a class="nav-link active" href="#">ALL</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">수업·조교</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">기타 정보</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">취업·인턴</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">지역선도대학 사업단</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SW중심대학 사업단</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">BK21 AI사업단</a></li>
+        </ul>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="post-header border-top pt-3">
+                    <h4>(E/B) [Study Group] 2025-2학기 전전스터디 그룹 신청</h4>
+                    <table class="post-meta-table">
+                        <tr>
+                            <td><strong>Writer</strong> lifove</td>
+                            <td><strong>Read</strong> 256</td>
+                            <td><strong>Category</strong> SW중심대학 사업단</td>
+                            <td><strong>No</strong> 7098</td>
+                            <td class="text-end"><strong>Date</strong> 2025-09-15</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <hr>
+
+                <div class="post-body">
+                    <p>(English Below)</p>
+                    <p>전산전자공학부 학생들의 학부 전공 공부 학습 경험을 최대화 하고자, 2019년도 1학기부터 스터디 그룹을 매칭하여 함께 공부하는 전전의 문화를 만들어 가고 있습니다.</p>
+                    <br>
+                    <p>같은 과목을 공부하는 학우들 끼리 함께 정기적으로 모여 공부를 하면서 전전 학생으로서의 소속감도 키우고, 학업 성취도 얻기 바랍니다. 전전의 전공 과목을 수강하는 학생이라면 학부 상관없이 누구나 참여 가능합니다.</p>
+                    <br>
+                </div>
+
+                <hr>
+
+                <div class="comment-section">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span><strong>Comment ▼</strong></span>
+                        <div class="d-flex align-items-center">
+                            <span class="me-2">작성자</span>
+                            <input type="text" class="form-control" value="강하영" style="width: 120px;">
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <textarea class="form-control me-2" rows="3"></textarea>
+                        <button class="btn btn-send">Send</button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end my-3">
+                    <a href="edit.html" class="btn btn-secondary me-2">Edit</a>
+                    <button type="button" class="btn btn-danger me-2" onclick="deletePost()">Delete</button>
+                    <a href="../index.html" class="btn btn-primary">List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function deletePost() {
+        if (confirm("게시물을 삭제할까요?")) {
+            alert("게시물이 삭제되었습니다.");
+            location.href = "../index.html"; 
+        } else {
+            console.log("삭제가 취소되었습니다.");
+        }
+    }
+</script>
+</body>
+</html>
