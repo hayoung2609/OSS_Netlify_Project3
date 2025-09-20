@@ -55,12 +55,6 @@
   border-right: none;
 }
 
-.table th:nth-child(2),
-.table td:nth-child(2) {
-  text-align: left;
-  padding-left: 15px;
-}
-
 .table td a {
   color: #333;
   text-decoration: none;
